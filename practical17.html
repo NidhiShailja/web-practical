@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        #box {
+            width: 250px;
+            height: 100px;
+            margin: 20px auto;
+            border: 2px solid black;
+            line-height: 100px;
+        }
+
+        .active {
+            background-color: lightgreen;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Mouse & Keyboard Event Listeners</h2>
+
+    <div id="box">Hover or Click Me</div>
+
+    <button id="addBtn">Add Events</button>
+    <button id="removeBtn">Remove Events</button>
+
+    <p id="keyMsg">Press any key on keyboard</p>
+
+    <script>
+        var box = document.getElementById("box");
+
+        function handleClick() {
+            box.classList.toggle("active");
+        }
+
+        function handleMouseOver() {
+            box.innerHTML = "Mouse Over!";
+        }
+
+        function handleKey(event) {
+            document.getElementById("keyMsg").innerHTML =
+                "Key Pressed: " + event.key;
+        }
+
+        // Add event listeners
+        document.getElementById("addBtn").addEventListener("click", function () {
+            box.addEventListener("click", handleClick);
+            box.addEventListener("mouseover", handleMouseOver);
+            document.addEventListener("keydown", handleKey);
+        });
+
+        // Remove event listeners
+        document.getElementById("removeBtn").addEventListener("click", function () {
+            box.removeEventListener("click", handleClick);
+            box.removeEventListener("mouseover", handleMouseOver);
+            document.removeEventListener("keydown", handleKey);
+
+            box.innerHTML = "Events Removed";
+        });
+    </script>
+
+</body>
+</html>

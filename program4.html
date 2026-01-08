@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Registeration Form</title>
+    </head>
+    <body>
+        <h2>Registration Form</h2>
+
+        <form action="#" method="post">
+            <label for="name">Full Name : </label>
+            <input type="text"  id="name" name="fullname" placeholder="Enter your name"><br><br>
+
+             <!--Radio Buttons-->
+            <label>Gender :</label><br>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="prefer not to say / other" name="prefer not to say / other" value="Prefer not to say / other">
+            <label for="prefer not to say / other" >Prefer not to say / other</label><br><br>
+
+            <!--Checkboxes-->
+            <label>Interests</label><br>
+            <input type="checkbox" id="Web Development" name="interest" value="Web Development">
+            <label for="web development">Web Development</label><br>
+            <input type="checkbox" id="machine learning" name="interest" value="machine learning">
+            <label for="machine learning">Machine Learning</label><br>
+            <input type="checkbox" id="iot" name="interest" value="iot">
+            <label for="iot">IoT</label><br>
+            <input type="checkbox" id="Other" name="interest" value="other">
+            <label for="other">Other</label><br><br>
+
+            <!--Select Menu-->
+            <label for="city">Select your city :</label>
+            <select id="city" name="city">
+                <option value=" ">--Choose City</option>
+                <option value="Pune">Pune</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Mumbai">Mumbai</option>
+            </select><br><br>
+            
+            <!--Buttons-->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>
